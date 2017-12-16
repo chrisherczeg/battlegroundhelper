@@ -1,0 +1,28 @@
+module.exports = {
+    'ITEM_EN_US': {
+      "awm": 1,
+      "m249": 1,
+      "mini 14": 2,
+      "m24": 1.5,
+      "sks": 2,
+      "kar 98": 2,
+      "groza": 2,
+      "akm": 3,
+      "scar l" : 3,
+      "m416" : 3.3,
+      "m16a4" : 3.2,
+      "s1897": 4.5,
+      "tommy gun": 4,
+      "ump": 4,
+      "micro uzi": 4.2,
+      "s12k": 4,
+      "s686": 5,
+      "p18c": 5,
+      "vss": 5,
+      "vector": 5,
+      "p92": 6,
+      "colt 45": 6.2,
+      "r1895": 6.3,
+      "crossbow": 7,
+    }
+  };
