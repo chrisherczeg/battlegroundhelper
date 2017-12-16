@@ -1,0 +1,30 @@
+module.exports = {
+    'ITEM_EN_US': {
+      "scar l": "The Scar-L can be found in all loot zones, but chances are better in medium to high zones. ",
+      "akm": "The A K M can be found in all loot zones, chances are good in low, medium, and high zones",
+      "groza": "The Groza is only found in air drops and is a rare find.",
+      "m16a4": "The M16A4 can be found in all loot zones, chances are good in low, medium, and high zones",
+      "m416": "The m416 can be found in all loot zones.",
+      "mk14": "The mk14 can only be found in air drops and is rare find.",
+      "sks": "The S K S can be found in all loot zones.",
+      "mini 14": "The Mini 14 can be found in all loot zones.",
+      "micro uzi": "The Micro Uzi can be found in all loot zones.",
+      "tommy gun": "The Tommy Gun can be found in all loot zones.",
+      "ump": "The UMP9 can be found in all loot zones and has a rarity of common.",
+      "vector": "The Vector can be found in all loot zones and has a rarity of uncommon.",
+      "awm": "The A W M can only be found in air drops and is a rare find.",
+      "kar 98": "The Kar 98 can be found in all loot zones and has a rarity of uncommon.",
+      "m24": "The M24 can only be found in air drops and is a rare find.",
+      "vss": "The V S S  can be found in all loot zones and has a rarity of uncommon. ",
+      "m249": "The m249 can ony be found in air drops and is a rare find.",
+      "s12k ": "The S12K can be found in all loot zones and has a rarity of common.",
+      "s1897": "The s1897 can be found in all loot zones and has a rarity of common. ",
+      "double barrel": "The double barrel can be found in all loot zones and has a rarity of common.",
+      "p18c": "The p18c can be found in all loot zones and has a rarity of uncommon.",
+      "colt 45": "The colt 45 can be found in all loot zones and has a rarity of common.",
+      "p92": "The p92 can be found in all loot zones and has a rarity of common.",
+      "r1895": "The r1895 can be found in all loot zones and has a rarity of common.",
+      "crossbow": "The crossbow can be found in all loot zones and has a rarity of common.",
+
+    }
+};
