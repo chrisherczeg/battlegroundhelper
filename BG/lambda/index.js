@@ -13,14 +13,14 @@ const languageStrings = {
             ITEMS: items.ITEM_EN_US,
             ITEMS_STATS: itemsStats.ITEM_EN_US,
             ITEM_RANK: rank.ITEM_EN_US,
-            SKILL_NAME: 'PlayerUnknown Battleground Helper',
-            WELCOME_MESSAGE: "Welcome to %s. You can ask questions like what are the stats of an Scar L or where can I find an A K M.",
+            SKILL_NAME: "PlayerUnknown's Battleground Helper",
+            WELCOME_MESSAGE: "Welcome to %s. You can ask questions like what are the stats of a Scar L or compare the SKS and mini 14.",
             WELCOME_REPROMPT: 'For instructions on what you can say, please say help me.',
             DISPLAY_CARD_TITLE: '%s  - Response for %s.',
             DISPLAY_CARD_TITLE_TWO: '%s  - Response for %s and %s.',
             WEAPON_CHOICE: 'The %s is the better choice based off of collected statistics from the PlayerUnknown Battleground Wiki',
-            HELP_MESSAGE: "You can ask questions such as, how can i get a item, what is the stat of an item or, you can say exit...Now, what can I help you with?",
-            HELP_REPROMPT: "You can ask questions such as, how can i get a item, what is the stat of an item or, you can say exit...Now, what can I help you with?",
+            HELP_MESSAGE: "You can ask questions such as, how can i get an item, what are the stats of an item or, you can say exit...Now, what can I help you with?",
+            HELP_REPROMPT: "You can ask questions such as, how can i get an item, what are the stats of an item or, you can say exit...Now, what can I help you with?",
             STOP_MESSAGE: 'Thanks for using PlayerUnknown Battleground Helper, let me know if you need more help!!',
             ITEM_REPEAT_MESSAGE: 'Try saying repeat.',
             ITEM_NOT_FOUND_MESSAGE: "I\'m sorry, I currently do not know ",
@@ -45,7 +45,7 @@ const handlers = {
         // understood, they will be prompted again with this text.
         this.attributes.repromptSpeech = this.t('WELCOME_REPROMPT');
         //was an ask
-        this.emit('SessionEndedRequest');
+        this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
     },
     'StatIntent': function () {
         //itemSlot is the variable that stores the users spoken item
