@@ -20,6 +20,7 @@ module.exports = {
       "awm": "The AWM is a bolt-action rifle, has a hit damage of 132, magazine capacity of 5, range of 100 to 1000, bullet speed of 910, and fires a .300 round. ",
       "kar 98": "The Kar 98 is a bolt action rifle, has a hit damage of 72, magazine capacity of 5, range of 100 to 600, bullet speed of 760, and fire a 7.62 round.",
       "kar": "The Kar 98 is a bolt action rifle, has a hit damage of 72, magazine capacity of 5, range of 100 to 600, bullet speed of 760, and fire a 7.62 round.",
+      "car": "The Kar 98 is a bolt action rifle, has a hit damage of 72, magazine capacity of 5, range of 100 to 600, bullet speed of 760, and fire a 7.62 round.",
       "m24": "The M24 is a bolt action rifle, has a hit damage of 84, magazine capacity of 5, range of 100 to 800, bullet speed of 853, and fires a 7.62 round.",
       "vss": "The V S S is a special supressed sniper rifle, has a hit damage of 38, time between shot of 0.086 seconds, magazine capacity of 10, range of 100, bullet speed of 330, and fires a 9 millimeter round.",
       "m249": "The m249 is a light machine gun, has a hit damage of 44, time between shot of 0.075, magazine capacity of 100, range of 100 to 500, bullet speed of 915, and fires a 5.56 NATO round.",

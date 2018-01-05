@@ -28,6 +28,7 @@ const languageStrings = {
             ITEM_NOT_FOUND_WITH_ITEM_NAME: 'the item %s. ',
             ITEM_NOT_FOUND_WITHOUT_ITEM_NAME: 'that item. ',
             ITEM_NOT_FOUND_REPROMPT: 'What else can I help with?',
+            TIER: 'The %s is a %s weapon',
         },
     },
     'en-US': {
@@ -177,7 +178,7 @@ const handlers = {
         const item = myItems[itemName];
 
         if (item) {
-            this.attributes.speechOutput = item;
+            //this.attributes.speechOutput = item;
             //this.attributes.repromptSpeech = this.t('ITEM_REPEAT_MESSAGE');
 
             this.response.speak(item);
@@ -200,6 +201,80 @@ const handlers = {
 
             this.emit(':ask', speechOutput, repromptSpeech);
         }
+    },
+    'TierIntent': function () {
+        //itemSlot is the variable that stores the users spoken item
+        const itemSlot = this.event.request.intent.slots.Item;
+        let itemName;
+        //If the user said an item and the item exist in the module sheet then it is stored in itemName
+        if(itemSlot && itemSlot.value){
+          itemName = itemSlot.value.toLowerCase();
+        }
+
+        const cardTitle = this.t('DISPLAY_CARD_TITLE', this.t('SKILL_NAME'), itemName);
+        const myItems = this.t('ITEM_RANK');
+        //takes the users request finds the items stats that correspond 
+        const item = myItems[itemName];
+
+        if (item == 1) {
+            var tier;
+            tier = 'god tier';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 2) {
+            var tier;
+            tier = 'tier one';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 3) {
+            var tier;
+            tier = 'tier two';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 4) {
+            var tier;
+            tier = 'tier three';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 5) {
+            var tier;
+            tier = 'tier four';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 6) {
+            var tier;
+            tier = 'tier five';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else if (item == 7) {
+            var tier;
+            tier = 'tier six';
+            this.response.speak(this.t('TIER', itemName, tier));
+            this.response.cardRenderer(cardTitle, this.t('TIER', itemName, tier));
+            this.emit(':responseReady');
+        } else {
+            let speechOutput = this.t('ITEM_NOT_FOUND_MESSAGE');
+            const repromptSpeech = this.t('ITEM_NOT_FOUND_REPROMPT');
+            if (itemName) {
+                speechOutput += this.t('ITEM_NOT_FOUND_WITH_ITEM_NAME', itemName);
+            } else {
+                speechOutput += this.t('ITEM_NOT_FOUND_WITHOUT_ITEM_NAME');
+            }
+            speechOutput += repromptSpeech;
+
+            this.attributes.speechOutput = speechOutput;
+            this.attributes.repromptSpeech = repromptSpeech;
+            //if no item is found, repromts user
+            this.emit(':ask', speechOutput, repromptSpeech);
+        }
+        
+        this.emit(':tell', this.t('STOP_MESSAGE'));
     },
     'AMAZON.HelpIntent': function () {
         this.attributes.speechOutput = this.t('HELP_MESSAGE');
